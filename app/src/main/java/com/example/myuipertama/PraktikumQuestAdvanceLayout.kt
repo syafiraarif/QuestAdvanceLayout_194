@@ -179,6 +179,49 @@ fun Praktikum1 (modifier: Modifier) {
                     )
                 }
             }
+            Spacer(modifier = Modifier.height(height = 8.dp))
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp, horizontal = 16.dp),
+                shape = RoundedCornerShape(size = 20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.DarkGray)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .padding(all = 16.dp)
+                        .fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.transaksi),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 50.dp)
+                            .clip(CircleShape)
+                    )
+
+                    Text(
+                        text = stringResource(id = R.string.riwayat),
+                        fontSize = 22.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White
+                    )
+
+                    Image(
+                        painter = painterResource(id = R.drawable.play),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 45.dp)
+                            .clip(CircleShape)
+                    )
+                }
+            }
+
+
+
 
         }
     }
