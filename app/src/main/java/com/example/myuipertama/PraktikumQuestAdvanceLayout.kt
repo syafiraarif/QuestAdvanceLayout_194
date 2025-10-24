@@ -87,13 +87,25 @@ fun Praktikum1 (modifier: Modifier) {
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
+                        painter = painterResource(id = R.drawable.twitter),
+                        contentDescription = "instagram",
+                        modifier = Modifier.size(size = 20.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.width(width = 8.dp))
+
+                Box(
+                    modifier = Modifier
+                        .size(size = 40.dp)
+                        .background(Color(color = 0xFF2A2A2A), shape = CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
                         painter = painterResource(id = R.drawable.linkedin),
                         contentDescription = "instagram",
                         modifier = Modifier.size(size = 20.dp)
                     )
                 }
-
-
             }
         }
     }
