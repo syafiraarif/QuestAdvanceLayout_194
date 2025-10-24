@@ -3,10 +3,12 @@ package com.example.myuipertama
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -21,29 +23,48 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun Praktikum1 (modifier: Modifier) {
-    Column (
+    Box(
         modifier = Modifier
-            .padding (top = 100.dp)
+            .padding (all = 16.dp)
+            .background(Color(color = 0xFF121212))
             .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Image(
-            painter = painterResource(id = R.drawable.syafira),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .size(100.dp)
-                .background(Color.Gray, shape = CircleShape)
-                .padding(2.dp)
-        )
-        Spacer(modifier = Modifier.height(height = 30.dp))
+        Column (
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.fillMaxWidth()
 
-        Row (
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
         ){
+            Spacer(modifier = Modifier.height(height = 40.dp))
 
+            Image(
+                painter = painterResource(id = R.drawable.syafira),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(size = 100.dp)
+                    .background(Color.Gray, shape = CircleShape)
+                    .padding(all = 2.dp)
+            )
+            Spacer(modifier = Modifier.height(height = 30.dp))
+
+            Row (
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ){
+                Box(
+                    modifier = Modifier
+                        .size(size = 40.dp)
+                        .background(Color(color = 0xFF2A2A2A), shape = CircleShape),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.facebook),
+                        contentDescription = "facebook",
+                        modifier = Modifier.size(size = 20.dp)
+                    )
+                }
+
+            }
         }
     }
-
 }
