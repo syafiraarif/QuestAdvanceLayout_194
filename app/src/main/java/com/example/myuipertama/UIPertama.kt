@@ -19,10 +19,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -124,9 +126,18 @@ fun ActivitasPertama(modifier: Modifier) {
                         .size(size = 100.dp)
                         .padding(all = 5.dp)
                 )
-
-
             }
         }
+    }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
+        Text(
+            text = stringResource(id = R.string.copy) ,
+            modifier = Modifier
+                .align (Alignment.BottomCenter)
+                .padding(bottom = 50.dp)
+        )
     }
 }

@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyUIPertamaTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ActivitasPertama(
+                    Praktikum1(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
