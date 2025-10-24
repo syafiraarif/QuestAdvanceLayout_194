@@ -119,6 +119,12 @@ fun Praktikum1 (modifier: Modifier) {
                 fontSize = 22.sp,
                 color = Color.White
             )
+
+            Text(
+                text = stringResource(id = R.string.username),
+                fontSize = 14.sp,
+                color = Color.Gray
+            )
         }
     }
 }
